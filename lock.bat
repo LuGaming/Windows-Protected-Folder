@@ -4,7 +4,7 @@ if EXIST "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" goto UNLOCK
 if NOT EXIST Locker goto MDLOCKER
 
 :CONFIRM
-echo Sind Sie sicher, dass Sie den Ordner sperren möchten (Ja/Nein)?
+echo Sind Sie sicher, dass Sie den Ordner sperren moechten (Ja/Nein)?
 set/p "cho=>"
 if %cho%==J goto LOCK
 if %cho%==j goto LOCK
@@ -30,7 +30,7 @@ set/p "pass=>"
 if NOT %pass%==YOUR PASSWORD HERE goto FAIL
 attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Locker
-echo Der Ordner wurde entschlüsselt
+echo Der Ordner wurde entschluesselt
 goto End
 
 :FAIL
@@ -40,7 +40,7 @@ goto end
 
 :MDLOCKER
 md Locker
-echo Der Gesicherter Ordner wurde erfolgreich erstellt
+echo Der gesicherte Ordner wurde erfolgreich erstellt
 pause
 goto End
 
